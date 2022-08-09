@@ -17,4 +17,5 @@ public class RootController {
 
         return new ResponseEntity<>(resultVo, HttpStatus.OK);
     }
+
 }
