@@ -8,13 +8,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/")
 public class RootController {
 
-    @GetMapping("root")
+    @GetMapping("/")
     public ResponseEntity<ResultVo> helloWorld(){
 
-        ResultVo resultVo = ResultVo.builder().data("STG WAS Hello World").build();
+        ResultVo resultVo = ResultVo.builder().data("thejoin DEV WAS Hello World").build();
 
         return new ResponseEntity<>(resultVo, HttpStatus.OK);
     }
