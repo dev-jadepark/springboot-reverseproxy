@@ -18,5 +18,13 @@ public class RootController {
         return new ResponseEntity<>(resultVo, HttpStatus.OK);
     }
 
+    @GetMapping("/test")
+    public ResponseEntity<ResultVo> helloWorldtest(){
+
+        ResultVo resultVo = ResultVo.builder().data("thejoin DEV WAS Hello World").build();
+
+        return new ResponseEntity<>(resultVo, HttpStatus.OK);
+    }
+
 
 }
