@@ -12,7 +12,7 @@ public class RootController {
 
     @GetMapping("/")
     public ResponseEntity<ResultVo> helloWorld(){
-
+        System.out.println("request중");
         ResultVo resultVo = ResultVo.builder().data("thejoin DEV WAS Hello World").build();
 
         return new ResponseEntity<>(resultVo, HttpStatus.OK);
@@ -22,7 +22,7 @@ public class RootController {
     public ResponseEntity<ResultVo> helloWorldtest(){
 
         ResultVo resultVo = ResultVo.builder().data("thejoin DEV WAS Hello World").build();
-
+        System.out.println("request중");
         return new ResponseEntity<>(resultVo, HttpStatus.OK);
     }
 
