@@ -35,7 +35,7 @@ public class RootController {
         int mm = localTime.getMinute();
         int ss = localTime.getSecond();
         System.out.println( HH + ":" + mm + ":" + ss + " request");
-        ResultVo resultVo = ResultVo.builder().data(Arrays.toString(env.getActiveProfiles()) + " WAS Hello World").build();
+        ResultVo resultVo = ResultVo.builder().data(HH + ":" + mm + ":" + ss + ":" + Arrays.toString(env.getActiveProfiles()) + " WAS Hello World").build();
 
         return new ResponseEntity<>(resultVo, HttpStatus.OK);
 
@@ -49,7 +49,7 @@ public class RootController {
         int mm = localTime.getMinute();
         int ss = localTime.getSecond();
         System.out.println( HH + ":" + mm + ":" + ss + " request");
-        ResultVo resultVo = ResultVo.builder().data(Arrays.toString(env.getActiveProfiles()) + " WAS Hello World").build();
+        ResultVo resultVo = ResultVo.builder().data(HH + ":" + mm + ":" + ss + ":" + Arrays.toString(env.getActiveProfiles()) + " WAS Hello World").build();
         return new ResponseEntity<>(resultVo, HttpStatus.OK);
     }
 
