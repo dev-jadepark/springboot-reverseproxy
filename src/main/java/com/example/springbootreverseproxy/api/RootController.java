@@ -17,14 +17,14 @@ import java.util.Date;
 public class RootController {
 
     private final Environment env;
-    String[] activeProfiles = env.getActiveProfiles();
+
 
     final Date date = new Date();
 
     @GetMapping("/")
     public ResponseEntity<ResultVo> helloWorld(){
         System.out.println( date.getTime() +" request");
-        ResultVo resultVo = ResultVo.builder().data(Arrays.toString(activeProfiles) + " WAS Hello World").build();
+        ResultVo resultVo = ResultVo.builder().data(Arrays.toString(env.getActiveProfiles()) + " WAS Hello World").build();
 
         return new ResponseEntity<>(resultVo, HttpStatus.OK);
 
@@ -33,7 +33,7 @@ public class RootController {
     @GetMapping("/test")
     public ResponseEntity<ResultVo> helloWorldtest(){
         System.out.println( date.getTime() +" request");
-        ResultVo resultVo = ResultVo.builder().data(Arrays.toString(activeProfiles) + " WAS Hello World").build();
+        ResultVo resultVo = ResultVo.builder().data(Arrays.toString(env.getActiveProfiles()) + " WAS Hello World").build();
         return new ResponseEntity<>(resultVo, HttpStatus.OK);
     }
 
